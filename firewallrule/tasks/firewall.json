@@ -1,0 +1,33 @@
+{
+    "puppet_task_version": 1,
+    "supports_noop": false,
+    "description": "Add a firewall rule",
+    "input_method": "powershell",
+    "parameters": {
+      "displayname": {
+        "description": "The name of the firewall rule to be added",
+        "type": "String"
+      },
+      "direction": {
+        "description": "Direction of rule,whether inbound/outbound",
+        "type": "Enum['inbound', 'outbound']"
+      },
+      "port": {
+        "description": "value for port(integer)",
+        "type": "Integer"
+      },
+      "protocol": {
+        "description": "TCP/UDP",
+        "type": "Enum['TCP', 'UDP']"
+      },
+      "action": {
+        "description": "Allow/Block",
+        "type": "Enum['Allow', 'Block']"
+      },
+      "scope": {
+          "description": "Scope of the rule(remote address)",
+          "type": "Optional[String]"
+      }
+      
+   }
+}
